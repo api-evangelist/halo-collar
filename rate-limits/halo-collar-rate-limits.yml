@@ -1,0 +1,23 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.halocollar.com/ and https://support.halocollar.com/hc/en-us
+limit_count: 0
+note: >-
+  Halo Collar publishes no API and therefore no rate limits. There is no developer
+  portal, API reference or terms section describing request quotas, and the first-party
+  app backend at api.halocollar.com returns no RateLimit-*, X-RateLimit-* or Retry-After
+  headers on its unauthenticated root response. The only published usage allowance is a
+  consumer one — "unlimited cellular data" on every Pack Membership tier — which is a
+  device data plan, not an API rate limit.
+rate_limits: []
+headers_observed: []
+x-evidence:
+  fetched: '2026-08-22'
+  urls:
+  - url: https://api.halocollar.com/
+    status: 200
+    note: response carries no rate-limit headers
+  - url: https://www.halocollar.com/plans/
+    status: 200
+  - url: https://www.halocollar.com/unified-terms-and-conditions/
+    status: 200

@@ -1,17 +1,51 @@
 aid: halo-collar
 name: Halo Collar
-description: 'Halo Collar is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Halo Collar is the consumer GPS dog-fence and dog-tracking product built by
+  Protect Animals With Satellites LLC (d/b/a Halo), founded in 2017 by Ken Ehrman, Michael
+  Ehrman and dog behaviorist Cesar Millan. The product pairs a cellular- and GPS-connected
+  smart collar (currently Halo Collar 5, with Halo Collar 4 still sold) with a companion
+  iOS/Android app that lets an owner draw virtual GPS fences, watch real-time location,
+  trigger Cesar Millan-designed training feedback, and read activity reports. The service
+  runs on a required Pack Membership subscription in Bronze, Silver and Gold tiers that
+  carries unlimited cellular data, an increasing virtual-fence allowance, accessory
+  discounts and third-party partner perks. Halo publishes no public developer program: the
+  app is served by a first-party, undocumented backend at api.halocollar.com (an ASP.NET
+  service that self-identifies as Halo.Web.Api), and there is no developer portal, API
+  reference, OpenAPI/AsyncAPI/GraphQL contract, SDK or webhook surface anywhere on the
+  company''s public web properties.'
+image: https://d252xzqwj6utz.cloudfront.net/static/owls-home/halo-logo-light.svg
 url: https://raw.githubusercontent.com/api-evangelist/halo-collar/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-secondary-market-listing: https://forgeglobal.com/halo-collar_stock/
+x-legal-entity: Protect Animals With Satellites LLC (d/b/a Halo)
+x-tier: profile
+x-tier-reason: no-api-surface
+specificationVersion: '0.23'
 created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Pet Tech
+- Consumer IoT
+- GPS Tracking
+- Geofencing
+- Wearables
+- Connected Devices
+- Mobile Apps
+- Subscription Service
+- Consumer Hardware
+tags_raw:
+- Company
+- Pet Tech
+- Consumer IoT
+- GPS Tracking
+- Geofencing
+- Wearables
+- Connected Devices
+- Mobile Apps
+- Subscription Service
+- Consumer Hardware
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +53,83 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/halo-collar-domain-security.yml
 - type: Website
+  url: https://www.halocollar.com/
+- type: About
+  url: https://www.halocollar.com/about/
+- type: Support
+  url: https://support.halocollar.com/hc/en-us
+- type: FAQ
+  url: https://www.halocollar.com/faq/
+- type: Blog
+  url: https://www.halocollar.com/blog/
+- type: PressReleases
+  url: https://www.halocollar.com/press/
+- type: Careers
+  url: https://www.halocollar.com/careers/
+- type: Pricing
+  url: https://www.halocollar.com/plans/
+- type: SignUp
+  url: https://www.halocollar.com/signup/
+- type: Login
+  url: https://www.halocollar.com/login/
+- type: TermsOfService
+  url: https://www.halocollar.com/unified-terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://www.halocollar.com/privacy-notice/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/halocollar
+- type: Instagram
+  url: https://www.instagram.com/halocollar
+- type: YouTube
+  url: https://www.youtube.com/@halocollar
+- type: TikTok
+  url: https://www.tiktok.com/@halocollar
+- type: iOSApp
+  url: https://apps.apple.com/us/app/halo-collar/id1476830649
+- type: AndroidApp
+  url: https://play.google.com/store/apps/details?id=com.paws.haloapp
+- type: Investors
   url: https://forgeglobal.com/halo-collar_stock/
+- type: LLMsTxt
+  url: llms/halo-collar-llms.txt
+- type: Packages
+  url: packages/halo-collar-packages.yml
+- type: Plans
+  url: plans/halo-collar-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/halo-collar-rate-limits.yml
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Halo sells an end-user GPS dog collar and app: its only API host, api.halocollar.com,
+    is the private ASP.NET backend for the mobile app (it answers 200 with a
+    "Halo.Web.Api" service banner and a JSON 404 envelope on every other path), and there
+    is no developer portal, no API reference, no SDK and no docs./developer. host in DNS
+    at all.
+  evidence:
+  - url: https://api.halocollar.com/
+    status: 200
+  - url: https://api.halocollar.com/openapi.json
+    status: 404
+  - url: https://api.halocollar.com/swagger/v1/swagger.json
+    status: 404
+  - url: https://api.halocollar.com/graphql
+    status: 404
+  - url: https://developer.halocollar.com/
+    status: 0
+  - url: https://www.halocollar.com/llms.txt
+    status: 404
+  - url: https://www.halocollar.com/.well-known/agent-card.json
+    status: 404
+  - url: https://halo-api.agents.halocollar.com/.well-known/agent-card.json
+    status: 0
+  checked: '2026-08-22'

@@ -1,0 +1,124 @@
+generated: '2026-08-22'
+method: probed
+source: live probes of the Halo Collar web, API, support and agent hosts
+summary: >-
+  Halo Collar publishes no /.well-known/ discovery documents. Every path probed on
+  www.halocollar.com (nginx/WordPress marketing site), api.halocollar.com (the
+  first-party ASP.NET mobile-app backend that self-identifies as "Halo.Web.Api"), and
+  support.halocollar.com (Zendesk help center) returned 404. Two hosts named in Halo's
+  certificate transparency records — halo-api.agents.halocollar.com and
+  halo.agents.halocollar.com, both CNAMEd to proxy.a.smyth.ai (SmythOS, an AI agent
+  platform) — did not answer at all: TCP 443 and 80 both time out from the probe host.
+  No WellKnown or SecurityTxt pointer is emitted, because nothing was served.
+hosts:
+- host: www.halocollar.com
+  note: WordPress marketing site behind Cloudflare/nginx.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: api.halocollar.com
+  note: >-
+    First-party mobile-app backend on Azure App Service (halo-prod-app.azurewebsites.net).
+    GET / returns {"serviceName":"Halo.Web.Api","environment":"Production","version":"1.3.11.2"}.
+    Every other path answers a JSON 404 envelope: {"errorCode":1001,"message":"The request
+    handler for 'GET <path>' was not found."} — undocumented and unversioned in public.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: support.halocollar.com
+  note: Zendesk-hosted help center; serves a Zendesk 404 page for every well-known path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: halo-api.agents.halocollar.com
+  note: >-
+    Found in certificate transparency (api.certspotter.com), not linked from any Halo page.
+    CNAME 8a1e07460ea9d7e77fcc49d1b9a09b9a.proxy.a.smyth.ai -> 51.81.140.197 (OVH). Neither
+    443 nor 80 completes a connection; status 0 records a connection timeout, not a 404.
+    A sibling host halo.agents.halocollar.com behaves identically.
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+  - path: /.well-known/openid-configuration
+    status: 0
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+  - path: /.well-known/api-catalog
+    status: 0
+  - path: /.well-known/ai-plugin.json
+    status: 0
+  - path: /.well-known/agent-card.json
+    status: 0
+  - path: /.well-known/agent.json
+    status: 0
+files: []
+x-evidence:
+  fetched: '2026-08-22'
+  contract_discovery:
+  - url: https://api.halocollar.com/
+    status: 200
+    note: 'JSON service banner: Halo.Web.Api 1.3.11.2 (Microsoft-IIS/10.0, ASP.NET)'
+  - url: https://api.halocollar.com/openapi.json
+    status: 404
+  - url: https://api.halocollar.com/openapi.yaml
+    status: 404
+  - url: https://api.halocollar.com/swagger.json
+    status: 404
+  - url: https://api.halocollar.com/swagger/v1/swagger.json
+    status: 404
+  - url: https://api.halocollar.com/v1/openapi.json
+    status: 404
+  - url: https://api.halocollar.com/api-docs
+    status: 404
+  - url: https://api.halocollar.com/docs
+    status: 404
+  - url: https://api.halocollar.com/redoc
+    status: 404
+  - url: https://api.halocollar.com/graphql
+    status: 404
+  - url: https://api.halocollar.com/mcp
+    status: 404
+  - url: https://www.halocollar.com/llms.txt
+    status: 404
+  - url: https://developer.halocollar.com/
+    status: 0
+    note: does not resolve
+  - url: https://docs.halocollar.com/
+    status: 0
+    note: does not resolve

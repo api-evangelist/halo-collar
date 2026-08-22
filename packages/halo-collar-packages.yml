@@ -1,0 +1,68 @@
+generated: '2026-08-22'
+method: searched
+source: >-
+  npm registry, PyPI, RubyGems, crates.io, NuGet, Maven Central and the GitHub API,
+  plus halocollar.com and support.halocollar.com
+note: >-
+  Halo Collar publishes no client libraries. There is no public API for an SDK to wrap,
+  and no first-party package was found in any public registry. The company's only
+  publicly distributed software is the consumer Halo app for iOS and Android, which is
+  an end-user application rather than a package a developer can install — recorded below
+  under applications, with no version/published fields because app stores are not
+  package registries with a metadata endpoint we can read unauthenticated in the same
+  shape. No SDKs pointer is emitted.
+packages: []
+applications:
+- platform: ios
+  name: Halo Collar
+  publisher: Protect Animals With Satellites, LLC
+  url: https://apps.apple.com/us/app/halo-collar/id1476830649
+  version: null
+  published: null
+  official: true
+  note: >-
+    App Store listing; version is only exposed in the store UI, not in an unauthenticated
+    registry metadata endpoint, so it is recorded null rather than guessed.
+- platform: android
+  name: Halo Collar
+  package_id: com.paws.haloapp
+  publisher: Protect Animals With Satellites, LLC
+  url: https://play.google.com/store/apps/details?id=com.paws.haloapp
+  version: null
+  published: null
+  official: true
+  note: Google Play listing; same reason for null version.
+github:
+  organization: https://github.com/HaloCollar
+  ownership: unverified
+  public_repos: 2
+  note: >-
+    A GitHub organization named HaloCollar exists (created 2023-06-15) and holds two
+    FORKS — mcpproxy-go and Puppy (a Swift logging library) — with no public members, no
+    description, no verified domain and no link from halocollar.com. Ownership by Protect
+    Animals With Satellites LLC could not be established, so no GitHubOrganization pointer
+    is emitted and nothing here is attributed to the company. A second empty org,
+    Halo-Collar (created 2022-01-31, 0 repos), is likewise unattributable.
+x-evidence:
+  fetched: '2026-08-22'
+  urls:
+  - url: https://registry.npmjs.org/halocollar
+    status: 404
+  - url: https://registry.npmjs.org/halo-collar
+    status: 404
+  - url: https://registry.npmjs.org/@halocollar/sdk
+    status: 404
+  - url: https://pypi.org/pypi/halocollar/json
+    status: 404
+  - url: https://api.github.com/orgs/halocollar
+    status: 200
+  - url: https://api.github.com/orgs/halocollar/public_members
+    status: 200
+    note: empty array
+  - url: https://api.github.com/orgs/halo-collar
+    status: 200
+    note: zero public repositories
+  - url: https://apps.apple.com/us/app/halo-collar/id1476830649
+    status: 200
+  - url: https://play.google.com/store/apps/details?id=com.paws.haloapp
+    status: 200

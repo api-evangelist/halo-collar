@@ -1,0 +1,77 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.halocollar.com/plans/
+plan_count: 3
+note: >-
+  These are Halo's consumer "Pack Membership" subscription tiers for the collar and app
+  service — NOT API plans. Halo publishes no API, so there is no API pricing of any kind.
+  The plans page lists tier names, inclusions and partner perks but does NOT print a
+  monthly or annual price for any tier: prices are only shown after signing in or during
+  checkout, so every price field below is null rather than guessed. A membership is
+  mandatory — "A plan is required to keep your collar active" — and billing cycles are
+  monthly, annual (1 month free) or 2-year (3 months free).
+currency: USD
+billing_periods:
+- monthly
+- annual
+- 2-year
+plans:
+- name: Bronze
+  label: Basic Protection
+  price: null
+  billing_period: monthly|annual|2-year
+  included:
+    virtual_fences: 5
+    cellular_data: unlimited
+    collar_discount: $150 off new collars
+    accessory_discount: null
+    activity_reports: false
+    added_perks_stated_value: $300+
+    perks:
+    - 3 months of Pawp TeleVet
+    - $155 in The Pets Table food credits
+    - $50 in Travel + Leisure GO certificates
+- name: Silver
+  label: Most Popular
+  price: null
+  billing_period: monthly|annual|2-year
+  included:
+    virtual_fences: 20
+    cellular_data: unlimited
+    collar_discount: $175 off new collars
+    accessory_discount: 25% off all accessories
+    activity_reports: true
+    added_perks_stated_value: $900+
+    perks:
+    - 6 months of Pawp TeleVet
+    - $215 in The Pets Table food credits
+    - $500 in Travel + Leisure GO certificates
+- name: Gold
+  label: Best Value
+  price: null
+  billing_period: monthly|annual|2-year
+  included:
+    virtual_fences: unlimited
+    cellular_data: unlimited
+    collar_discount: $200 off new collars
+    accessory_discount: 50% off all accessories
+    activity_reports: advanced
+    added_perks_stated_value: $1,500+
+    perks:
+    - Unlimited 24/7 Pawp TeleVet
+    - $275 in The Pets Table food credits
+    - $1,000 in Travel + Leisure GO certificates
+hardware:
+- name: Halo Collar 5
+  price: '$524'
+  list_price: '$599'
+- name: Halo Collar 4
+  price: '$424'
+  list_price: '$549'
+x-evidence:
+  fetched: '2026-08-22'
+  urls:
+  - url: https://www.halocollar.com/plans/
+    status: 200
+  - url: https://www.halocollar.com/packperks/
+    status: 200
