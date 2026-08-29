@@ -13,6 +13,17 @@ description: 'Halo Collar is the consumer GPS dog-fence and dog-tracking product
   service that self-identifies as Halo.Web.Api), and there is no developer portal, API
   reference, OpenAPI/AsyncAPI/GraphQL contract, SDK or webhook surface anywhere on the
   company''s public web properties.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://d252xzqwj6utz.cloudfront.net/static/owls-home/halo-logo-light.svg
 url: https://raw.githubusercontent.com/api-evangelist/halo-collar/refs/heads/main/apis.yml
 x-type: company
