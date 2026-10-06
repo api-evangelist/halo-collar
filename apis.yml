@@ -48,7 +48,7 @@ x-tier: profile
 x-tier-reason: no-api-surface
 specificationVersion: '0.23'
 created: '2026-08-22'
-modified: '2026-08-22'
+modified: '2026-10-06'
 tags:
 - Company
 - Pet Tech
@@ -78,6 +78,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://www.halocollar.com/blog/feed/
+  type: BlogRSS
 - type: DomainSecurity
   url: security/halo-collar-domain-security.yml
 - type: Website
