@@ -75,3 +75,27 @@ x-evidence:
     status: 200
   - url: https://www.halocollar.com/packperks/
     status: 200
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Bronze
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Silver
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Gold
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
