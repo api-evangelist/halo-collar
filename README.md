@@ -64,5 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Halo Collar is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/halo-collar_stock/
+Halo Collar is the consumer GPS dog-fence and dog-tracking product built by Protect Animals With Satellites LLC (d/b/a Halo), founded in 2017 by Ken Ehrman, Michael Ehrman and dog behaviorist Cesar Millan. The product pairs a cellular- and GPS-connected smart collar (currently Halo Collar 5, with Halo Collar 4 still sold) with a companion iOS/Android app that lets an owner draw virtual GPS fences, watch real-time location, trigger Cesar Millan-designed training feedback, and read activity reports. The service runs on a required Pack Membership subscription in Bronze, Silver and Gold tiers that carries unlimited cellular data, an increasing virtual-fence allowance, accessory discounts and third-party partner perks. Halo publishes no public developer program: the app is served by a first-party, undocumented backend at api.halocollar.com (an ASP.NET service that self-identifies as Halo.Web.Api), and there is no developer portal, API reference, OpenAPI/AsyncAPI/GraphQL contract, SDK or webhook surface anywhere on the company's public web properties.
+
+**Areas:** Company · Pet Tech · Consumer IoT · GPS Tracking · Geofencing · Wearables · Connected Devices · Mobile App · Subscription Service · Consumer Hardware
+
+## Halo Collar on APIs.io
+
+Everything profiled for Halo Collar is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/halo-collar/](https://apis.io/providers/halo-collar/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Halo Collar Domain Security](https://apis.io/security/halo-collar/halo-collar-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Halo Collar Plans Pricing](https://apis.io/plans/halo-collar/halo-collar-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Halo Collar Rate Limits](https://apis.io/rate-limits/halo-collar/halo-collar-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.halocollar.com/)
+- [Pricing](https://www.halocollar.com/plans/)
+- [Sign up](https://www.halocollar.com/signup/)
+- [Support](https://support.halocollar.com/hc/en-us)
+- [Blog](https://www.halocollar.com/blog/)
+- [Terms of service](https://www.halocollar.com/unified-terms-and-conditions/)
+- [Privacy policy](https://www.halocollar.com/privacy-notice/)
+
+## API Evangelist rating
+
+**Kin Score 21.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 49.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 76.3 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/halo-collar/](https://apis.io/providers/halo-collar/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Halo Collar: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/halo-collar/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
